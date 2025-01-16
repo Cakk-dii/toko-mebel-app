@@ -46,10 +46,10 @@ class RolePermissionSeeder extends Seeder
         $admin->givePermissionTo($permissions); // Admin mendapatkan semua permissions
 
         $kepalaToko = Role::create(['name' => 'kepala toko']);
-        $kepalaToko->givePermissionTo(['manage store', 'view categories','add categories','edit categories','delete categories','view product','add product','edit product','delete product','view sales','process sales']); // Kepala toko memiliki sebagian permissions
+        $kepalaToko->givePermissionTo(['manage store', 'view categories','add categories','edit categories','view product','add product','edit product','view sales','process sales','edit sales']); // Kepala toko memiliki sebagian permissions
 
         $kasir = Role::create(['name' => 'kasir']);
-        $kasir->givePermissionTo('manage store', 'process sales', 'view product','view sales','add sales','edit sales'); // Kasir hanya memiliki permission "process sales"
+        $kasir->givePermissionTo('manage store', 'process sales', 'view product','view categories','view sales','add sales'); // Kasir hanya memiliki permission "process sales"
 
         // Buat user contoh
         $users = [

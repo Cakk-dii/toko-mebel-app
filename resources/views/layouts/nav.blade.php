@@ -52,10 +52,10 @@
                         </a>
                     </li>
                 @endcan
-                @can('view-medicines')
-                    <li class="menu-item {{ (request()->is('medicines')) ? 'active' : '' }}">
-                        <a href="{{ url('medicines') }}" class="menu-link">
-                            <div data-i18n="Obat">Obat</div>
+                @can('view product')
+                    <li class="menu-item {{ (request()->is('products')) ? 'active' : '' }}">
+                        <a href="{{ url('products') }}" class="menu-link">
+                            <div data-i18n="Product">Product</div>
                         </a>
                     </li>
                 @endcan
